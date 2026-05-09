@@ -4,6 +4,7 @@ import streamlit as st
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 import requests
+import os
 
 st.markdown("""
     <style>
@@ -24,7 +25,7 @@ st.markdown("""
 
 def fetch_poster(movie_id):
 
-    api_key = "063688c3aaf4bcf77d3e3f0287278b5d"
+    API_KEY = os.getenv("API_KEY")
 
     try:
 
